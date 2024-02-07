@@ -10,13 +10,13 @@ project = dl.projects.get('COCO')
 dataset2 = project.datasets.get('demo')
 dataset1 = project.datasets.get('version')
 item = dataset1.items.upload(local_path=r'E:\Datasets\COCO\2017\images\val2017\000000000785.jpg')
-##########################
+############################
 # Clone to other dataset #
-##########################
+###########################
 assert isinstance(item, dl.Item)
 cloned = item.clone(dst_dataset_id=dataset2.id, remote_filepath='/cloned/{}'.format(item.name))
 
-##################
+####################
 # Inference both #
 ####################
 
