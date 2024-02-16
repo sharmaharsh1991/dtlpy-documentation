@@ -18,7 +18,7 @@ cloned = item.clone(dst_dataset_id=dataset2.id, remote_filepath='/cloned/{}'.for
 
 ##################
 # Inference both #
-##################
+####################
 
 image = Image.open(item.download())
 output, out_boxes, out_scores, out_classes = model.detect_image(image)
